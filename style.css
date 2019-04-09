@@ -2,7 +2,7 @@ body {
   font-family: 'Noto Sans', sans-serif;
   margin-top: -20px;
   overflow-x: hidden;
-  }
+}
 
 header {
   margin-top: -45px;
@@ -12,9 +12,10 @@ header {
   background-image: url(https://i.imgur.com/O1SYEI1.jpg);
   background-color: #8792a3;
   background-size: cover;
+  background-position: center center;
   background-blend-mode: multiply;
   height: 600px;
-  }
+}
 
 h1 {
   color: white;
@@ -22,6 +23,7 @@ h1 {
   position: relative;
   left: 5%;
   top: 15%;
+  width: 60%;
 }
 
 h2 {
@@ -49,7 +51,7 @@ p {
   position: relative;
   left: 5%;
   padding-top: 5%;
-  margin-bottom: -2%;
+  margin-bottom: 5%;
   text-align: justify;
   background-color: white;
 }
@@ -88,15 +90,11 @@ a:hover {
 #cv {
   color: white;
   background-color: #456990;
-  font-size: 200%;
+  font-size: 250%;
   position: relative;
-  left: 0px;
-  padding-left: 60px;
-  top: 90px;
-  padding-top: 30px;
-  margin-bottom: 0px;
-  padding-bottom: 30px;
-  text-align: center;
+  padding-top: 45px;
+  padding-left: 10%;
+  width: 80%;
 }
 
 *,
@@ -112,42 +110,24 @@ article {
   color: #535963;
   margin-bottom: -8%;
   z-index: 0;
+  text-align: center;
 }
 
-
-/* .section SECTION
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .section {
   background-color: #456990;
   padding: 50px 0;
   width: 100%;
-}
-
-.section .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
 
 }
-
-.section h1 {
-  font-size: 2.5rem;
-}
-
-.section h2 {
-  font-size: 1.3rem;
-}
-
-
-/* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
   width: 100%;
+  margin-top: -8%;
 }
 
 .timeline ol {
@@ -236,4 +216,141 @@ article {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .intro {
+    height: 500px;
+  }
+
+  .intro h1 {
+    font-size: 300%;
+  }
+
+.intro h2 {
+  font-size: 120%;
+}
+
+  .intro p {
+    font-size: 120%;
+    width: 50%;
+  }
+
+  p {
+    font-size: 140%;
+  }
+
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  header {
+    margin-top: -20px;
+  }
+
+  .intro {
+    height: 300px;
+  }
+
+  .intro h1 {
+    font-size: 200%;
+  }
+
+  .intro h2 {
+    font-size: 120%;
+  }
+
+  .intro p {
+    font-size: 100%;
+    width: 70%;
+    left: 5%;
+  }
+
+  p {
+    font-size: 120%;
+  }
+
+  #cv {
+    font-size: 180%;
+  }
+
+  .info {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .timeline time {
+    font-size: 1.7rem;
+  }
+  .timeline a {
+    font-size: 1.2rem;
+  }
+  .timeline ol,
+  .timeline ol li {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .timeline {
+    margin-top: 0;
+  }
+
+  .timeline ol,
+  .timeline ol li {
+    width: 90%;
+  }
+
+  .timeline ol {
+    padding: 0;
+    transform: none !important;
+    margin-bottom: 150px;
+  }
+
+  .timeline ol li {
+    display: block;
+    height: auto;
+    background: transparent;
+  }
+
+  .timeline ol li:first-child {
+    margin-top: 25px;
+    margin-left: 10%;
+  }
+
+  .timeline ol li:not(:first-child) {
+    margin-left: auto;
+  }
+
+  .timeline ol li div {
+    width: 94%;
+    height: auto !important;
+    margin: 0 auto 25px;
+  }
+
+  .timeline ol li div {
+    position: static;
+  }
+
+  .timeline ol li:nth-child(odd) div {
+    transform: none;
+  }
+
+  .timeline ol li:nth-child(odd) div::before,
+  .timeline ol li:nth-child(even) div::before {
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: none;
+    border-left: 1px solid white;
+    height: 25px;
+  }
+
+  .timeline ol li:last-child,
+  .timeline ol li:nth-last-child(2) div::before,
+  .timeline ol li:not(:last-child)::after,
+  .timeline .arrows {
+    display: none;
+  }
 }
